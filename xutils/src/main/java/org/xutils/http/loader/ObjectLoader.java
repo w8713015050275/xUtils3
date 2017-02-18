@@ -104,6 +104,7 @@ import java.util.List;
             result = ((InputStreamResponseParser) parser).parse(objectType, objectClass, in);
         } else {
             resultStr = IOUtil.readStr(in, charset);
+            LogUtil.d("zhc resultStr: " + result);
             result = parser.parse(objectType, objectClass, resultStr);
         }
         return result;
